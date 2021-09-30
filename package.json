@@ -1,0 +1,17 @@
+{
+  "name": "avant-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js -f json:report/cucumber_report.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber": "^7.0.0-rc.0",
+    "cucumber-html-reporter": "^5.5.0",
+    "mocha": "^9.1.1",
+    "pactum": "^3.0.19"
+  }
+}

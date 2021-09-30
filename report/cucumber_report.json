@@ -1,0 +1,373 @@
+[
+  {
+    "description": "    In order to get info from an specific account\n    As QA user\n    I want to make sure that correct status is being returned",
+    "elements": [
+      {
+        "description": "",
+        "id": "check-status-of-get-account-info;check-status-and-body-content-for-get-account",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "check status and body content for get account",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I make a POST request to /get_account_information",
+            "match": {
+              "location": "features/specs/steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I receive a response",
+            "match": {
+              "location": "features/specs/steps.js:47"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1197000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: HTTP status 401 !== 200\n    + expected - actual\n\n    -401\n    +200\n\n    at Expect._validateStatus (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:100:14)\n    at Expect.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:45:10)\n    at Tosser.validateResponse (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:173:23)\n    at Tosser.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:146:18)\n    at Tosser.toss (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:38:18)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)\n    at async World.<anonymous> (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/features/specs/steps.js:48:14)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I expect response should have a status 200",
+            "match": {
+              "location": "features/specs/steps.js:52"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I expect response should have a matching json schema",
+            "match": {
+              "location": "features/specs/steps.js:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "check-status-of-get-account-info;check-status-for-find-matches",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "check status for find matches",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I make a POST request to /find_matches",
+            "match": {
+              "location": "features/specs/steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I receive a response",
+            "match": {
+              "location": "features/specs/steps.js:47"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 707000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: HTTP status 401 !== 200\n    + expected - actual\n\n    -401\n    +200\n\n    at Expect._validateStatus (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:100:14)\n    at Expect.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:45:10)\n    at Tosser.validateResponse (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:173:23)\n    at Tosser.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:146:18)\n    at Tosser.toss (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:38:18)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)\n    at async World.<anonymous> (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/features/specs/steps.js:48:14)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I expect response should have a status 200",
+            "match": {
+              "location": "features/specs/steps.js:52"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I expect response should have a matching json schema",
+            "match": {
+              "location": "features/specs/steps.js:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "check-status-of-get-account-info;check-status-for-update-identity",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "check status for update identity",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I make a POST request to /update_identity",
+            "match": {
+              "location": "features/specs/steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I receive a response",
+            "match": {
+              "location": "features/specs/steps.js:47"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 585000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: HTTP status 401 !== 200\n    + expected - actual\n\n    -401\n    +200\n\n    at Expect._validateStatus (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:100:14)\n    at Expect.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:45:10)\n    at Tosser.validateResponse (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:173:23)\n    at Tosser.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:146:18)\n    at Tosser.toss (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:38:18)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)\n    at async World.<anonymous> (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/features/specs/steps.js:48:14)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I expect response should have a status 200",
+            "match": {
+              "location": "features/specs/steps.js:52"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I expect response should have a matching json schema",
+            "match": {
+              "location": "features/specs/steps.js:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "check-status-of-get-account-info;check-status-and-body-content-for-get-profile-info",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "check status and body content for get profile info",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "I make a POST request to /get_profile_information",
+            "match": {
+              "location": "features/specs/steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "I receive a response",
+            "match": {
+              "location": "features/specs/steps.js:47"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 645000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: HTTP status 401 !== 200\n    + expected - actual\n\n    -401\n    +200\n\n    at Expect._validateStatus (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:100:14)\n    at Expect.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:45:10)\n    at Tosser.validateResponse (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:173:23)\n    at Tosser.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:146:18)\n    at Tosser.toss (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:38:18)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)\n    at async World.<anonymous> (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/features/specs/steps.js:48:14)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "I expect response should have a status 200",
+            "match": {
+              "location": "features/specs/steps.js:52"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I expect response should have a matching json schema",
+            "match": {
+              "location": "features/specs/steps.js:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "check-status-of-get-account-info;check-status-and-body-content-for-update-profile-info",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "check status and body content for update profile info",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "I make a POST request to /update_profile_information",
+            "match": {
+              "location": "features/specs/steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "I receive a response",
+            "match": {
+              "location": "features/specs/steps.js:47"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 710000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: HTTP status 401 !== 200\n    + expected - actual\n\n    -401\n    +200\n\n    at Expect._validateStatus (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:100:14)\n    at Expect.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/expect.js:45:10)\n    at Tosser.validateResponse (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:173:23)\n    at Tosser.validate (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:146:18)\n    at Tosser.toss (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/node_modules/pactum/src/models/Tosser.js:38:18)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)\n    at async World.<anonymous> (/Users/sebastian.gaviria/Desktop/git_amount/avant-API/features/specs/steps.js:48:14)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "I expect response should have a status 200",
+            "match": {
+              "location": "features/specs/steps.js:52"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I expect response should have a matching json schema",
+            "match": {
+              "location": "features/specs/steps.js:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "check-status-of-get-account-info",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Check status of Get Account Info",
+    "tags": [],
+    "uri": "features/api_collection.feature"
+  }
+]
