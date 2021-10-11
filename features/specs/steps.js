@@ -8,37 +8,33 @@ const url = "https://www.avant.uat1.amount.com/api/v3/customer_management/inboun
 const auth = "https://www.avant.uat1.amount.com/api/v3/customer_management/auth/token"
 let body, schema
 
-Before(async() => { 
-  spec = pactum.spec(); 
-
-  pactum.spec().post(auth).withHeaders('authorization','Basic YXZhbnQ6MDg3OTMzYzJiNjUxZTEwOGNhMjRiYmRiYzZkYjQwNzE=').expectStatus(200);
-  //.stores(token, '#access_token');
-  //console.error(token)
-  
+Before(async () => {
+  resp = await pactum.spec().post(auth).withHeaders('authorization', 'Basic YXZhbnQ6MDg3OTMzYzJiNjUxZTEwOGNhMjRiYmRiYzZkYjQwNzE=').toss();
+  auth_token = resp.body.access_token
+  //console.log(auth_token)
 });
 
 Given(/^I make a POST request to (.*)$/, function (endpoint) {
-
-
-  if (endpoint == "/get_account_information"){
+  if (endpoint == "/get_account_information") {
     body = data.customer
     schema = schemas.customer_sh
-  }else if (endpoint == "/find_matches"){
+  } else if (endpoint == "/find_matches") {
     body = data.matches
     schema = schemas.matches_sh
-  }else if (endpoint == "/update_identity"){
+  } else if (endpoint == "/update_identity") {
     body = data.update_identity
     schema = schemas.update_identity_sh
-  }else if (endpoint == "/get_profile_information"){
+  } else if (endpoint == "/get_profile_information") {
     body = data.customer
     schema = schemas.profile_info_sh
-  }else if (endpoint == "/update_profile_information"){
+  } else if (endpoint == "/update_profile_information") {
     body = data.update_profile_info
     schema = schemas.update_profile_info_sh
   }
 
-  spec.post(url+endpoint)
-    .withHeaders('authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzI3ODE5MTgsImV4cCI6MTYzMjg2ODMxOCwianRpIjoiZDZkMTRkMGEtMTFmZC00ODIzLWEzYmMtYThiMDY4MzM3MDA3In0.J8NJk1sO3yHCfapq0Jcu_5a_F0ySkIouQz8GjrTy018')
+  spec = pactum.spec();
+  spec.post(url + endpoint)
+    .withHeaders('authorization', 'Bearer ' + auth_token)
     .withBody(body)
     .expectStatus(200);
 });
@@ -46,7 +42,7 @@ Given(/^I make a POST request to (.*)$/, function (endpoint) {
 
 When('I receive a response', async function () {
   response = await spec.toss();
-  console.log (response)
+  //console.log(response.body)
 });
 
 Then('I expect response should have a status {int}', function (code) {
